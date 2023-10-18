@@ -5,6 +5,7 @@ import MainLayout from 'layout/MainLayout';
 import CommonLayout from 'layout/CommonLayout';
 import Loadable from 'components/Loadable';
 import AuthGuard from 'utils/route-guard/AuthGuard';
+import LandingLayout from 'layout/LandingLayout';
 
 // pages routing
 const MaintenanceError = Loadable(lazy(() => import('pages/maintenance/404')));
@@ -14,6 +15,8 @@ const MaintenanceComingSoon = Loadable(lazy(() => import('pages/maintenance/comi
 
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
+
+const LandingPage = Loadable(lazy(() => import('pages/landing/landing')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -53,6 +56,16 @@ const MainRoutes = {
         {
           path: 'coming-soon',
           element: <MaintenanceComingSoon />
+        }
+      ]
+    },
+    {
+      path: '/landing',
+      element: <LandingLayout />,
+      children: [
+        {
+          index: true,
+          element: <LandingPage />
         }
       ]
     }
