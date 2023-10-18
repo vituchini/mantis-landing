@@ -1,4 +1,4 @@
-import { Button, Container, Link, Stack, Typography } from '@mui/material';
+import { Button, CardMedia, Container, Link, Stack } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import { useTheme } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
@@ -28,7 +28,7 @@ const Header = () => {
               color: theme.palette.grey[600],
 
               '&:hover': {
-                color: theme.palette.grey[800]
+                color: theme.palette.primary.main
               }
             }
           }}
