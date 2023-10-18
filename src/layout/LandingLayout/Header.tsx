@@ -14,7 +14,6 @@ const Header = () => {
       sx={{ bgcolor: 'transparent', color: theme.palette.text.primary, boxShadow: 'none', paddingBlock: 1.5, mt: 3 }}
     >
       <Container sx={{ display: 'flex', alignItems: 'center', gap: '89px' }}>
-        {/* TODO: add logo icon */}
         <Link component={RouterLink} to="/landing" color="inherit" underline="none">
           <CardMedia component="img" image={logo} />
         </Link>
