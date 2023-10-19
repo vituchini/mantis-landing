@@ -34,7 +34,7 @@ const Benefits = () => {
           <Grid item md={4}>
             <Card
               sx={{
-                borderBottomLeftRadius: '90px'
+                borderBottomLeftRadius: { md: '90px' }
               }}
             >
               <Stack spacing={16}>
@@ -80,6 +80,7 @@ const Benefits = () => {
           <Grid item md={4}>
             <Card
               sx={{
+                borderBottomLeftRadius: { xs: '90px', md: '40px' },
                 borderBottomRightRadius: '90px'
               }}
             >
