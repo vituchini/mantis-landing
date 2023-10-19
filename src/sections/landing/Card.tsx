@@ -32,6 +32,7 @@ const CardTitle = styled(Typography)(({ theme }) => ({
   color: theme.palette.grey.A400,
   fontWeight: 300,
   fontSize: 32,
+  lineHeight: 1.2,
   letterSpacing: -1
 }));
 
