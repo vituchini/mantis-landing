@@ -36,6 +36,11 @@ const CardTitle = styled(Typography)(({ theme }) => ({
   letterSpacing: -1
 }));
 
-const CardText = styled(Typography)({});
+const CardText = styled(Typography)(({ theme }) => ({
+  color: theme.palette.grey[500],
+  fontWeight: 300,
+  fontSize: 16,
+  letterSpacing: -1
+}));
 
 export { Card, CardText, CardTitle };
