@@ -37,7 +37,7 @@ const Benefits = () => {
                 borderBottomLeftRadius: { md: '90px' }
               }}
             >
-              <Stack spacing={16}>
+              <Stack spacing={{ xs: 2, md: 16 }}>
                 <CardMedia
                   sx={{
                     width: 128,
@@ -58,7 +58,7 @@ const Benefits = () => {
           </Grid>
           <Grid item md={4}>
             <Card>
-              <Stack spacing={16}>
+              <Stack spacing={{ xs: 2, md: 16 }}>
                 <CardMedia
                   sx={{
                     width: 128,
@@ -84,7 +84,7 @@ const Benefits = () => {
                 borderBottomRightRadius: '90px'
               }}
             >
-              <Stack spacing={16}>
+              <Stack spacing={{ xs: 2, md: 16 }}>
                 <CardMedia
                   sx={{
                     width: 128,
