@@ -108,6 +108,11 @@ const Header = () => {
               maxWidth: '230px',
               width: '100%'
             }}
+            PaperProps={{
+              sx: {
+                borderRadius: 4
+              }
+            }}
           >
             {LINKS.map(({ label, path }) => (
               <MenuItem
