@@ -1,9 +1,6 @@
-import { Typography, styled, type TypographyProps, type TypographyTypeMap } from '@mui/material';
-import { type OverridableComponent } from '@mui/material/OverridableComponent';
+import { Typography, styled } from '@mui/material';
 
-const SectionDescription = styled<OverridableComponent<TypographyTypeMap<{}, 'span'>>>((props: TypographyProps) => (
-  <Typography {...props} />
-))(({ theme }) => ({
+const SectionDescription = styled(Typography)(({ theme }) => ({
   fontWeight: 300,
   fontSize: 20,
   color: theme.palette.grey[600],
