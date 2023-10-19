@@ -17,6 +17,7 @@ const Card = ({ children, sx, ...other }: CardProps) => {
     >
       <CardContent
         sx={{
+          height: '100%',
           '&, &:last-child': {
             padding: '48px 56px'
           }
