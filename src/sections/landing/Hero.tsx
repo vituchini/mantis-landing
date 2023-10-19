@@ -19,11 +19,12 @@ const Hero = () => {
           display: 'grid',
           gap: '40px',
           marginInline: 'auto',
-          padding: '20px',
+          paddingInline: '20px',
+          paddingBlock: '20px 40px',
           maxWidth: 1720,
           borderRadius: 10,
 
-          [theme.breakpoints.up('md')]: {
+          [theme.breakpoints.up('lg')]: {
             gridTemplateColumns: 'repeat(3, 1fr)',
             gridTemplateRows: '350px 350px 130px 110px',
 
@@ -58,8 +59,8 @@ const Hero = () => {
           image={heroBg}
           sx={{
             height: '100%',
-            gridColumn: { xs: '1 / 2', md: '1 / 4' },
-            gridRow: { xs: '1 / 2', md: '1 / 3' },
+            gridColumn: { xs: '1 / 2', lg: '1 / 4' },
+            gridRow: { xs: '1 / 2', lg: '1 / 3' },
             borderRadius: 10,
             pointerEvents: 'none'
           }}
@@ -67,8 +68,8 @@ const Hero = () => {
         <Container
           maxWidth={'xl'}
           sx={{
-            gridColumn: { xs: '1 / 2', md: '1 / 4' },
-            gridRow: { xs: '1 / 2', md: '1 / 3' },
+            gridColumn: { xs: '1 / 2', lg: '1 / 4' },
+            gridRow: { xs: '1 / 2', lg: '1 / 3' },
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'end',
@@ -104,10 +105,9 @@ const Hero = () => {
         <Card
           sx={{
             boxShadow: '0 0 0 40px white',
-            gridColumn: { md: '3 / 4' },
-            gridRow: { md: '2 / 4' },
-            height: '100%',
-            maxWidth: { md: '500px', lg: '100%' }
+            gridColumn: { lg: '3 / 4' },
+            gridRow: { lg: '2 / 4' },
+            height: '100%'
           }}
         >
           <Stack justifyContent="space-between" height="100%">
@@ -123,7 +123,7 @@ const Hero = () => {
               <Stack spacing={2}>
                 <CardTitle
                   sx={{
-                    fontSize: { xs: 32, md: 'clamp(20px, 1.5vw, 32px)' }
+                    fontSize: { xs: 32, lg: 'clamp(20px, 1.5vw, 32px)' }
                   }}
                 >
                   Ullamcorper blandit rhoncus
@@ -145,8 +145,8 @@ const Hero = () => {
         </Card>
         <Box
           sx={{
-            gridColumn: { md: '3 / 4' },
-            height: { xs: 139, md: '100%' },
+            gridColumn: { lg: '3 / 4' },
+            height: { xs: 139, lg: '100%' },
             borderRadius: '50px 90px 90px 120px',
             border: `1px solid ${theme.palette.grey[200]}`,
             backgroundImage: `url(${heroDecorativeBlock})`,
