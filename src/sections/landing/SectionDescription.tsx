@@ -1,20 +1,13 @@
-import { Typography, useTheme } from '@mui/material';
+import { Typography, styled, type TypographyProps, type TypographyTypeMap } from '@mui/material';
+import { type OverridableComponent } from '@mui/material/OverridableComponent';
 
-const SectionDescription = ({ children }: React.PropsWithChildren) => {
-  const theme = useTheme();
-
-  return (
-    <Typography
-      sx={{
-        fontWeight: 300,
-        fontSize: 20,
-        color: theme.palette.grey[600],
-        letterSpacing: -1
-      }}
-    >
-      {children}
-    </Typography>
-  );
-};
+const SectionDescription = styled<OverridableComponent<TypographyTypeMap<{}, 'span'>>>((props: TypographyProps) => (
+  <Typography {...props} />
+))(({ theme }) => ({
+  fontWeight: 300,
+  fontSize: 20,
+  color: theme.palette.grey[600],
+  letterSpacing: -1
+}));
 
 export default SectionDescription;
