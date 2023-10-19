@@ -1,4 +1,4 @@
-import { Box, Button, CardMedia, Container, Stack, useTheme } from '@mui/material';
+import { Box, CardMedia, Container, Stack, useTheme } from '@mui/material';
 import { Card, CardText, CardTitle } from './Card';
 
 import heroBg from 'assets/images/landing/hero-bg.svg';
@@ -6,6 +6,7 @@ import heroShape from 'assets/images/landing/hero-shape.svg';
 import heroDecorativeBlock from 'assets/images/landing/hero-decorative-block.jpg';
 import SectionDescription from './SectionDescription';
 import { HighlightedTitleText, SectionTitle } from './SectionTitle';
+import CallToActionButton from 'components/call-to-action-button/CallToActionButton';
 
 const Hero = () => {
   const theme = useTheme();
@@ -97,7 +98,7 @@ const Hero = () => {
             </SectionDescription>
           </Stack>
           <Box mt={6}>
-            <Button variant="contained">Get Started</Button>
+            <CallToActionButton label="Get Started" href="#" variant="contained" />
           </Box>
         </Container>
         <Card
@@ -137,7 +138,7 @@ const Hero = () => {
                 </CardText>
               </Stack>
               <Box mt={2}>
-                <Button variant="contained">Create Task</Button>
+                <CallToActionButton label="Create Task" href="#" variant="outlined" />
               </Box>
             </Box>
           </Stack>

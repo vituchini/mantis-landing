@@ -5,6 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import logo from 'assets/images/artboard-logo.svg';
 import { useState } from 'react';
+import CallToActionButton from 'components/call-to-action-button/CallToActionButton';
 
 const LINKS = [
   {
@@ -69,8 +70,10 @@ const Header = () => {
             </Link>
           ))}
         </Stack>
-        {/* TODO: change button to match design */}
-        <Button variant="contained">Get Started</Button>
+        <Box display={{ xs: 'none', md: 'block' }}>
+          <CallToActionButton label="Get Started" href="#" variant="contained" size="small" />
+        </Box>
+
         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
