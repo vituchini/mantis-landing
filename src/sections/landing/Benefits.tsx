@@ -7,6 +7,26 @@ import shape1 from 'assets/images/benefits/shape-1.svg';
 import shape2 from 'assets/images/benefits/shape-2.svg';
 import shape3 from 'assets/images/benefits/shape-3.svg';
 
+const BenefitContent = ({ image, title, text }: { image: string; title: string; text: string }) => {
+  return (
+    <Stack spacing={{ xs: 2, md: 16 }}>
+      <CardMedia
+        sx={{
+          width: 128,
+          height: 128
+        }}
+        component="img"
+        image={image}
+        alt="Benefit shape"
+      />
+      <Stack spacing={2}>
+        <CardTitle>{title}</CardTitle>
+        <CardText>{text}</CardText>
+      </Stack>
+    </Stack>
+  );
+};
+
 const Benefits = () => {
   return (
     <Box component="section" bgcolor="white" py={8}>
@@ -41,46 +61,22 @@ const Benefits = () => {
                 borderBottomLeftRadius: { md: '90px' }
               }}
             >
-              <Stack spacing={{ xs: 2, md: 16 }}>
-                <CardMedia
-                  sx={{
-                    width: 128,
-                    height: 128
-                  }}
-                  component="img"
-                  image={shape1}
-                  alt="Benefit shape"
-                />
-                <Stack spacing={2}>
-                  <CardTitle>Ullamcorper blandit rhoncus</CardTitle>
-                  <CardText>
-                    Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
-                    rhoncus id et commodo ultricies adipiscing.
-                  </CardText>
-                </Stack>
-              </Stack>
+              <BenefitContent
+                image={shape1}
+                title="Ullamcorper blandit rhoncus"
+                text="Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
+                    rhoncus id et commodo ultricies adipiscing."
+              />
             </Card>
           </Grid>
           <Grid item md={4}>
             <Card>
-              <Stack spacing={{ xs: 2, md: 16 }}>
-                <CardMedia
-                  sx={{
-                    width: 128,
-                    height: 128
-                  }}
-                  component="img"
-                  image={shape2}
-                  alt="Benefit shape"
-                />
-                <Stack spacing={2}>
-                  <CardTitle>Pretium commodo</CardTitle>
-                  <CardText>
-                    Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
-                    rhoncus id et commodo ultricies adipiscing.
-                  </CardText>
-                </Stack>
-              </Stack>
+              <BenefitContent
+                image={shape2}
+                title="Pretium commodo"
+                text="Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
+								rhoncus id et commodo ultricies adipiscing."
+              />
             </Card>
           </Grid>
           <Grid item md={4}>
@@ -90,24 +86,12 @@ const Benefits = () => {
                 borderBottomRightRadius: '90px'
               }}
             >
-              <Stack spacing={{ xs: 2, md: 16 }}>
-                <CardMedia
-                  sx={{
-                    width: 128,
-                    height: 128
-                  }}
-                  component="img"
-                  image={shape3}
-                  alt="Benefit shape"
-                />
-                <Stack spacing={2}>
-                  <CardTitle>Enim eget eget</CardTitle>
-                  <CardText>
-                    Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
-                    rhoncus id et commodo ultricies adipiscing.
-                  </CardText>
-                </Stack>
-              </Stack>
+              <BenefitContent
+                image={shape3}
+                title="Enim eget eget"
+                text="Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
+								rhoncus id et commodo ultricies adipiscing."
+              />
             </Card>
           </Grid>
         </Grid>
