@@ -20,7 +20,11 @@ const Benefits = () => {
               }}
             >
               <Stack spacing={4} maxWidth={748}>
-                <SectionTitle>
+                <SectionTitle
+                  sx={{
+                    fontSize: 'clamp(40px, 5vw, 64px)'
+                  }}
+                >
                   Our <HighlightedTitleText>benefits</HighlightedTitleText>
                 </SectionTitle>
                 <SectionDescription>
