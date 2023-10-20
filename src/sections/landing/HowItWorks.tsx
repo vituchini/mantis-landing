@@ -10,7 +10,7 @@ import { HighlightedTitleText, SectionTitle } from './SectionTitle';
 
 const HowItWorks = () => {
   const theme = useTheme();
-  const isMediaEqualOrMoreThanXl = useMediaQuery(theme.breakpoints.up('xl'));
+  const isMediaEqualOrMoreThanXl = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <Box
@@ -26,12 +26,11 @@ const HowItWorks = () => {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xl: 'repeat(2, 1fr)' },
-            gridTemplateRows: { xl: '300px 60px 60px 300px' },
+            gridTemplateColumns: { lg: 'repeat(2, 1fr)' },
+            gridTemplateRows: { lg: '300px 55px 55px 300px', xl: '300px 60px 60px 300px' },
             columnGap: 3,
 
-            [theme.breakpoints.down('xl')]: {
-              padding: 3,
+            [theme.breakpoints.down('lg')]: {
               maxWidth: 600,
               marginInline: 'auto',
               rowGap: 3
@@ -42,23 +41,36 @@ const HowItWorks = () => {
             sx={{
               gridColumn: { xl: '2 / 3' },
               maxWidth: { xl: 619 },
-              justifySelf: { xl: 'end' }
+              justifySelf: { xl: 'end' },
+              paddingInline: { xs: '56px', xl: 0 }
             }}
           >
-            <SectionTitle lineHeight={1}>
+            <SectionTitle
+              lineHeight={1}
+              sx={{
+                fontSize: 'clamp(40px, 4vw, 64px)'
+              }}
+            >
               How it <HighlightedTitleText>works</HighlightedTitleText>
             </SectionTitle>
-            <SectionDescription mt={2}>
+            <SectionDescription
+              mt={2}
+              sx={{
+                fontSize: 'clamp(16px, 2.5vw, 20px)'
+              }}
+            >
               Lorem ipsum dolor sit amet consectetur. Pretium commodo sed purus cursus libero commodo. Neque ac id sed vitae ullamcorper
               elementum facilisis. In nascetur tempus consequat elementum urna purus maecenas mauris. Enim eget eget odio risus malesuada.
             </SectionDescription>
           </Box>
           <Stack
             sx={{
-              gridColumn: { xl: '1 / 2' },
-              gridRow: { xl: '1 / 2' },
+              gridColumn: { lg: '1 / 2' },
+              gridRow: { lg: '1 / 2' },
               position: 'relative',
-              padding: '40px 56px 10px',
+              paddingInline: '56px',
+              paddingBottom: '10px',
+              paddingTop: '40px',
 
               '& .hiw-shape': {
                 position: 'absolute',
@@ -67,8 +79,7 @@ const HowItWorks = () => {
                 width: '100%'
               },
 
-              [theme.breakpoints.down('xl')]: {
-                padding: '40px 56px',
+              [theme.breakpoints.down('lg')]: {
                 borderRadius: '80px',
                 border: `1px solid ${theme.palette.common.white}`,
                 backgroundColor: alpha(theme.palette.common.white, 0.25)
@@ -81,7 +92,7 @@ const HowItWorks = () => {
               justifyContent="space-between"
               height="100%"
               sx={{
-                gap: { xs: 4, xl: 'unset' }
+                gap: { xs: 4, lg: 'unset' }
               }}
             >
               <HowItWorksCardNumeration index={1} />
@@ -96,10 +107,12 @@ const HowItWorks = () => {
           </Stack>
           <Stack
             sx={{
-              gridColumn: { xl: '1 / 2' },
-              gridRow: { xl: '3 / 5' },
+              gridColumn: { lg: '1 / 2' },
+              gridRow: { lg: '3 / 5' },
               position: 'relative',
-              padding: '70px 56px 40px',
+              paddingInline: '56px',
+              paddingBottom: { xs: '40px', lg: '30px', xl: '40px' },
+              paddingTop: { xs: '40px', lg: '90px', xl: '70px' },
 
               '& .hiw-shape': {
                 position: 'absolute',
@@ -108,8 +121,7 @@ const HowItWorks = () => {
                 bottom: 0
               },
 
-              [theme.breakpoints.down('xl')]: {
-                padding: '40px 56px',
+              [theme.breakpoints.down('lg')]: {
                 borderRadius: '80px',
                 border: `1px solid ${theme.palette.common.white}`,
                 backgroundColor: alpha(theme.palette.common.white, 0.25)
@@ -122,12 +134,12 @@ const HowItWorks = () => {
               justifyContent="space-between"
               height="100%"
               sx={{
-                gap: { xs: 4, xl: 'unset' }
+                gap: { xs: 4, lg: 'unset' }
               }}
             >
               <HowItWorksCardNumeration index={2} />
               <Stack spacing={1}>
-                <CardTitle>Ullamcorper blandit rhoncus</CardTitle>
+                <CardTitle>Nec tempus justo velit massa dolor scelerisque</CardTitle>
                 <CardText>
                   Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
                   rhoncus id et commodo ultricies adipiscing.
@@ -137,10 +149,12 @@ const HowItWorks = () => {
           </Stack>
           <Stack
             sx={{
-              gridColumn: { xl: '2 / 3' },
-              gridRow: { xl: '2 / 5' },
+              gridColumn: { lg: '2 / 3' },
+              gridRow: { lg: '2 / 5' },
               position: 'relative',
-              padding: { xs: '0 56px 40px', xl: '80px 56px 40px' },
+              paddingInline: '56px',
+              paddingBottom: { xs: '40px', lg: '30px', xl: '40px' },
+              paddingTop: { xs: '40px', lg: '100px', xl: '80px' },
 
               '& .hiw-shape': {
                 position: 'absolute',
@@ -149,8 +163,7 @@ const HowItWorks = () => {
                 bottom: 0
               },
 
-              [theme.breakpoints.down('xl')]: {
-                padding: '40px 56px',
+              [theme.breakpoints.down('lg')]: {
                 borderRadius: '80px',
                 border: `1px solid ${theme.palette.common.white}`,
                 backgroundColor: alpha(theme.palette.common.white, 0.25)
@@ -163,12 +176,12 @@ const HowItWorks = () => {
                 position: 'relative',
                 justifyContent: 'space-between',
                 height: '100%',
-                gap: { xs: 4, xl: 'unset' }
+                gap: { xs: 4, lg: 'unset' }
               }}
             >
               <HowItWorksCardNumeration index={3} />
               <Stack spacing={1}>
-                <CardTitle>Ullamcorper blandit rhoncus</CardTitle>
+                <CardTitle>Pretium commodo sed purus </CardTitle>
                 <CardText>
                   Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
                   rhoncus id et commodo ultricies adipiscing.
