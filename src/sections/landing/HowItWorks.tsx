@@ -69,7 +69,7 @@ const HowItWorks = () => {
               gridRow: { lg: '1 / 2' },
               position: 'relative',
               paddingInline: '56px',
-              paddingBottom: '10px',
+              paddingBottom: { xs: '40px', lg: '10px' },
               paddingTop: '40px',
 
               '& .hiw-shape': {
