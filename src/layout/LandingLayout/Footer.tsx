@@ -123,7 +123,7 @@ const Footer = () => {
                 </Grid>
                 <Grid item>
                   <SocialLink underline="none">
-                    <CardMedia component={FacebookOutlined} sx={{ fontSize: 16 }} alt="Facebook icon" />
+                    <CardMedia component={FacebookOutlined} sx={{ fontSize: 16 }} />
                   </SocialLink>
                 </Grid>
               </Grid>
