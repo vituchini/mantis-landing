@@ -13,7 +13,7 @@ const SectionTitle = styled<OverridableComponent<TypographyTypeMap<{}, 'span'>>>
 const HighlightedTitleText = styled<OverridableComponent<TypographyTypeMap<{}, 'span'>>>((props: TypographyProps) => (
   <Typography variant="h2" component="span" {...props} />
 ))(({ theme }) => ({
-  fontSize: 64,
+  fontSize: 'inherit',
   fontWeight: 700,
   fontStyle: 'italic',
   letterSpacing: -1,
