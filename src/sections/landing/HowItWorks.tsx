@@ -8,6 +8,25 @@ import { CardText, CardTitle } from './Card';
 import SectionDescription from './SectionDescription';
 import { HighlightedTitleText, SectionTitle } from './SectionTitle';
 
+const CardContent = ({ index, title, text }: { index: number; title: string; text: string }) => {
+  return (
+    <Stack
+      position="relative"
+      justifyContent="space-between"
+      height="100%"
+      sx={{
+        gap: { xs: 4, lg: 'unset' }
+      }}
+    >
+      <HowItWorksCardNumeration index={index} />
+      <Stack spacing={1}>
+        <CardTitle>{title}</CardTitle>
+        <CardText>{text}</CardText>
+      </Stack>
+    </Stack>
+  );
+};
+
 const HowItWorks = () => {
   const theme = useTheme();
   const isMediaEqualOrMoreThanXl = useMediaQuery(theme.breakpoints.up('lg'));
@@ -89,23 +108,12 @@ const HowItWorks = () => {
             }}
           >
             {isMediaEqualOrMoreThanXl && <HIWShape1 />}
-            <Stack
-              position="relative"
-              justifyContent="space-between"
-              height="100%"
-              sx={{
-                gap: { xs: 4, lg: 'unset' }
-              }}
-            >
-              <HowItWorksCardNumeration index={1} />
-              <Stack spacing={1}>
-                <CardTitle>Ullamcorper blandit rhoncus</CardTitle>
-                <CardText>
-                  Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
-                  rhoncus id et commodo ultricies adipiscing.
-                </CardText>
-              </Stack>
-            </Stack>
+            <CardContent
+              index={1}
+              title="Ullamcorper blandit rhoncus"
+              text="Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
+                  rhoncus id et commodo ultricies adipiscing."
+            />
           </Stack>
           <Stack
             sx={{
@@ -127,23 +135,12 @@ const HowItWorks = () => {
             }}
           >
             {isMediaEqualOrMoreThanXl && <HIWShape2 />}
-            <Stack
-              position="relative"
-              justifyContent="space-between"
-              height="100%"
-              sx={{
-                gap: { xs: 4, lg: 'unset' }
-              }}
-            >
-              <HowItWorksCardNumeration index={2} />
-              <Stack spacing={1}>
-                <CardTitle>Nec tempus justo velit massa dolor scelerisque</CardTitle>
-                <CardText>
-                  Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
-                  rhoncus id et commodo ultricies adipiscing.
-                </CardText>
-              </Stack>
-            </Stack>
+            <CardContent
+              index={2}
+              title="Nec tempus justo velit massa dolor scelerisque"
+              text="Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
+                  rhoncus id et commodo ultricies adipiscing."
+            />
           </Stack>
           <Stack
             sx={{
@@ -165,23 +162,12 @@ const HowItWorks = () => {
             }}
           >
             {isMediaEqualOrMoreThanXl && <HIWShape3 />}
-            <Stack
-              sx={{
-                position: 'relative',
-                justifyContent: 'space-between',
-                height: '100%',
-                gap: { xs: 4, lg: 'unset' }
-              }}
-            >
-              <HowItWorksCardNumeration index={3} />
-              <Stack spacing={1}>
-                <CardTitle>Pretium commodo sed purus </CardTitle>
-                <CardText>
-                  Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
-                  rhoncus id et commodo ultricies adipiscing.
-                </CardText>
-              </Stack>
-            </Stack>
+            <CardContent
+              index={3}
+              title="Pretium commodo sed purus"
+              text="Lorem ipsum dolor sit amet consectetur. Nec tempus justo velit massa dolor scelerisque varius fames. Ullamcorper blandit
+                  rhoncus id et commodo ultricies adipiscing."
+            />
           </Stack>
         </Box>
       </Container>
