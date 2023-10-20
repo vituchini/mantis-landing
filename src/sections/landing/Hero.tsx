@@ -85,14 +85,7 @@ const Hero = () => {
                 fontSize: { xs: 'clamp(32px, 5.5vw, 64px)', md: 70 }
               }}
             >
-              Nec tempus justo velit{' '}
-              <HighlightedTitleText
-                sx={{
-                  fontSize: { xs: 'clamp(32px, 5.5vw, 64px)', md: 70 }
-                }}
-              >
-                massa dolor
-              </HighlightedTitleText>
+              Nec tempus justo velit <HighlightedTitleText>massa dolor</HighlightedTitleText>
               <br /> scelerisque.
             </SectionTitle>
             <SectionDescription>
