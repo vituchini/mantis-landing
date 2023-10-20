@@ -12,6 +12,12 @@ const HowItWorks = () => {
   const theme = useTheme();
   const isMediaEqualOrMoreThanXl = useMediaQuery(theme.breakpoints.up('lg'));
 
+  const commonShapeSx = {
+    borderRadius: '80px',
+    border: `1px solid ${theme.palette.common.white}`,
+    backgroundColor: alpha(theme.palette.common.white, 0.25)
+  };
+
   return (
     <Box
       component="section"
@@ -79,11 +85,7 @@ const HowItWorks = () => {
                 width: '100%'
               },
 
-              [theme.breakpoints.down('lg')]: {
-                borderRadius: '80px',
-                border: `1px solid ${theme.palette.common.white}`,
-                backgroundColor: alpha(theme.palette.common.white, 0.25)
-              }
+              [theme.breakpoints.down('lg')]: commonShapeSx
             }}
           >
             {isMediaEqualOrMoreThanXl && <HIWShape1 />}
@@ -121,11 +123,7 @@ const HowItWorks = () => {
                 bottom: 0
               },
 
-              [theme.breakpoints.down('lg')]: {
-                borderRadius: '80px',
-                border: `1px solid ${theme.palette.common.white}`,
-                backgroundColor: alpha(theme.palette.common.white, 0.25)
-              }
+              [theme.breakpoints.down('lg')]: commonShapeSx
             }}
           >
             {isMediaEqualOrMoreThanXl && <HIWShape2 />}
@@ -163,11 +161,7 @@ const HowItWorks = () => {
                 bottom: 0
               },
 
-              [theme.breakpoints.down('lg')]: {
-                borderRadius: '80px',
-                border: `1px solid ${theme.palette.common.white}`,
-                backgroundColor: alpha(theme.palette.common.white, 0.25)
-              }
+              [theme.breakpoints.down('lg')]: commonShapeSx
             }}
           >
             {isMediaEqualOrMoreThanXl && <HIWShape3 />}
