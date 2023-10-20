@@ -113,6 +113,7 @@ const Hero = () => {
               }}
               component="img"
               image={heroShape}
+              alt="Cube"
             />
             <Box>
               <Stack spacing={2}>

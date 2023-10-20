@@ -49,6 +49,7 @@ const Benefits = () => {
                   }}
                   component="img"
                   image={shape1}
+                  alt="Benefit shape"
                 />
                 <Stack spacing={2}>
                   <CardTitle>Ullamcorper blandit rhoncus</CardTitle>
@@ -70,6 +71,7 @@ const Benefits = () => {
                   }}
                   component="img"
                   image={shape2}
+                  alt="Benefit shape"
                 />
                 <Stack spacing={2}>
                   <CardTitle>Pretium commodo</CardTitle>
@@ -96,6 +98,7 @@ const Benefits = () => {
                   }}
                   component="img"
                   image={shape3}
+                  alt="Benefit shape"
                 />
                 <Stack spacing={2}>
                   <CardTitle>Enim eget eget</CardTitle>

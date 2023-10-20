@@ -46,7 +46,7 @@ const Header = () => {
     >
       <Container sx={{ display: 'flex', alignItems: 'center', gap: '89px', justifyContent: { xs: 'space-between', md: 'start' } }}>
         <Link component={RouterLink} to="/landing" color="inherit" underline="none">
-          <CardMedia component="img" image={logo} />
+          <CardMedia component="img" image={logo} alt="Artboard logo" />
         </Link>
         <Stack
           component="nav"
