@@ -1,4 +1,4 @@
-import { Box, CardMedia, Container, Stack, useTheme } from '@mui/material';
+import { Box, CardMedia, Container, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { Card, CardText, CardTitle } from './Card';
 
 import heroBg from 'assets/images/landing/hero-bg.svg';
@@ -10,6 +10,8 @@ import CallToActionButton from 'components/call-to-action-button/CallToActionBut
 
 const Hero = () => {
   const theme = useTheme();
+
+  const isSmallScreenSize = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Box component="section">
@@ -99,7 +101,7 @@ const Hero = () => {
             </SectionDescription>
           </Stack>
           <Box mt={6}>
-            <CallToActionButton label="Get Started" href="#" variant="contained" />
+            <CallToActionButton label="Get Started" href="#" variant="contained" size={isSmallScreenSize ? 'small' : 'default'} />
           </Box>
         </Container>
         <Card
@@ -138,7 +140,12 @@ const Hero = () => {
                 </CardText>
               </Stack>
               <Box mt={2}>
-                <CallToActionButton label="Create Task" href="#" variant="outlined" />
+                <CallToActionButton
+                  label="Create Task"
+                  href="#"
+                  variant={isSmallScreenSize ? 'contained' : 'outlined'}
+                  size={isSmallScreenSize ? 'small' : 'default'}
+                />
               </Box>
             </Box>
           </Stack>
