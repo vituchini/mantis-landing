@@ -113,17 +113,17 @@ const Footer = () => {
               <Grid container spacing={2} alignItems="center" sx={{ justifyContent: 'flex-end' }}>
                 <Grid item>
                   <SocialLink underline="none">
-                    <CardMedia component="img" image={imgFooterSoc1} />
+                    <CardMedia component="img" image={imgFooterSoc1} alt="Instagram icon" />
                   </SocialLink>
                 </Grid>
                 <Grid item>
                   <SocialLink underline="none">
-                    <CardMedia component="img" image={imgFooterSoc2} />
+                    <CardMedia component="img" image={imgFooterSoc2} alt="Twitter icon (now X)" />
                   </SocialLink>
                 </Grid>
                 <Grid item>
                   <SocialLink underline="none">
-                    <CardMedia component={FacebookOutlined} sx={{ fontSize: 16 }} />
+                    <CardMedia component={FacebookOutlined} sx={{ fontSize: 16 }} alt="Facebook icon" />
                   </SocialLink>
                 </Grid>
               </Grid>
