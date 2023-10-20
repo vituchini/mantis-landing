@@ -67,7 +67,7 @@ const HowItWorks = () => {
               gridColumn: { xl: '2 / 3' },
               maxWidth: { xl: 619 },
               justifySelf: { xl: 'end' },
-              paddingInline: { xs: '56px', xl: 0 }
+              paddingInline: { xs: '36px', sm: '56px', lg: 0 }
             }}
           >
             <SectionTitle
@@ -93,7 +93,7 @@ const HowItWorks = () => {
               gridColumn: { lg: '1 / 2' },
               gridRow: { lg: '1 / 2' },
               position: 'relative',
-              paddingInline: '56px',
+              paddingInline: { xs: '36px', sm: '56px' },
               paddingBottom: { xs: '40px', lg: '10px' },
               paddingTop: '40px',
 
@@ -120,7 +120,7 @@ const HowItWorks = () => {
               gridColumn: { lg: '1 / 2' },
               gridRow: { lg: '3 / 5' },
               position: 'relative',
-              paddingInline: '56px',
+              paddingInline: { xs: '36px', sm: '56px' },
               paddingBottom: { xs: '40px', lg: '30px', xl: '40px' },
               paddingTop: { xs: '40px', lg: '90px', xl: '70px' },
 
@@ -147,7 +147,7 @@ const HowItWorks = () => {
               gridColumn: { lg: '2 / 3' },
               gridRow: { lg: '2 / 5' },
               position: 'relative',
-              paddingInline: '56px',
+              paddingInline: { xs: '36px', sm: '56px' },
               paddingBottom: { xs: '40px', lg: '30px', xl: '40px' },
               paddingTop: { xs: '40px', lg: '100px', xl: '80px' },
 
